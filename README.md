@@ -8,9 +8,9 @@ An AI-driven web platform for early detection, severity grading, and rehabilitat
 
 ## 🎥 Demo Video
 
-(./assets/RespiratoryCare.mp4)
+(assets/RespiratoryCare.mp4)
 
-## 🔍 Overview
+##  Overview
 
 **RespireAI** enables users to record or upload respiratory sounds for real-time analysis. It identifies abnormal acoustic patterns (e.g., crackles, wheezes), classifies conditions (COPD, URTI, bronchiectasis, etc.), assesses severity levels (I–IV), and offers tailored breathing exercise recommendations.
 
@@ -29,10 +29,6 @@ An AI-driven web platform for early detection, severity grading, and rehabilitat
 - **Feature Extraction**: MFCCs, ZCR, Spectral Centroid, Chroma  
 - **Models**: Random Forests for diagnosis, severity, anomaly detection  
 - **Class Imbalance Handling**: SMOTE  
-- **Accuracy**:
-  - Diagnosis: **99%**
-  - Severity: **95%**
-  - Crackles/Wheezes: **82% / 86%**
 
 ---
 
