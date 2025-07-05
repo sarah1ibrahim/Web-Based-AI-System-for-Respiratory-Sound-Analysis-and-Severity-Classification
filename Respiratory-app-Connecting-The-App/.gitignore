@@ -1,0 +1,8 @@
+node_modules/
+Backend/uploads/
+Backend/models/
+Backend/python/__pycache__
+Backend/python/check_compatibility.py
+Backend/python/models/*.pkl
+Backend/python/venv
+Backend/python/new-venv

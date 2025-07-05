@@ -1,0 +1,1021 @@
+/* src/App.css */
+/* Existing styles (recap) */
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Wrapper for Public Routes */
+.page-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px; /* Updated to match assumed navbar height */
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+}
+
+/* Navbar (styles moved from inline to CSS for consistency) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Links */
+.navbar-nav .nav-item {
+  margin: 0 15px;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4a90e2 !important;
+}
+
+.navbar-nav .nav-item .btn-link {
+  color: #dc3545 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .btn-link:hover {
+  color: #a52834 !important;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background: url('../public/lung.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 1px;
+  overflow: hidden;
+  width: 100%;
+  /* Removed margin-top since page-wrapper handles spacing */
+}
+
+/* Overlay for Hero Section */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #f5f7fa;
+}
+
+.hero-content .btn-primary {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-content .btn-primary:hover {
+  background-color: #357abd;
+  border-color: #357abd;
+  transform: translateY(-2px);
+}
+
+/* User Options Section */
+.options-section {
+  padding: 5rem 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.options-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.options-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.option-card {
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+}
+
+.option-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #4a90e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.option-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.option-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Contact Us Section */
+.contact-section {
+  padding: 5rem 0;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+  flex: 3 0 auto;
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.about-section {
+  padding: 5rem 0;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.footer a {
+  color: #4a90e2;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+}
+
+.footer a:hover {
+  color: #357abd;
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Dashboard Container (for Sidebar + Content Layout) */
+.dashboard-container {
+  display: flex;
+  flex: 1;
+  margin-top: 70px; /* Updated to match assumed navbar height */
+  min-height: calc(100vh - 70px);
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  flex: 1;
+  margin-left: 250px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #2c2f3b;
+  color: #fff;
+  position: fixed;
+  top: 70px; /* Updated to match assumed navbar height */
+  left: 0;
+  height: calc(100vh - 70px); /* Updated to match assumed navbar height */
+  padding-top: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 900;
+  /* Removed margin-top since top already positions it */
+}
+
+.sidebar-header {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #3a3f51;
+}
+
+.sidebar-header h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  padding: 0.5rem 1rem;
+}
+
+.sidebar-nav li a {
+  color: #b0b3c1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.75rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar-nav li a:hover {
+  background-color: #3a3f51;
+  color: #fff;
+}
+
+.sidebar-nav .logout-btn {
+  background: none;
+  border: none;
+  color: #ff6584;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar-nav .logout-btn:hover {
+  background-color: #3a3f51;
+  color: #ff859f;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+  padding: 2rem;
+  background-color: #f5f7fa;
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+.dashboard-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+}
+
+/* Total Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.stat-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #6B48FF;
+  margin: 0;
+}
+
+/* Respiratory Trends and Recent Diagnoses */
+.dashboard-section .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-section .card-body {
+  padding: 1.5rem;
+}
+
+.dashboard-section .card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.dashboard-section .card canvas {
+  height: 300px !important;
+}
+
+.diagnoses-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.diagnosis-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.diagnosis-item:last-child {
+  border-bottom: none;
+}
+
+.diagnosis-item strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+.diagnosis-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* src/App.css */
+
+/* Upload Content */
+/* src/App.css */
+
+/* Upload Content */
+.upload-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.upload-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.upload-content .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.upload-content .card-body {
+  padding: 2rem;
+}
+
+.upload-content .card-body h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Guidelines Grid */
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Guideline Cards */
+.guideline-card {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #4a90e2;
+}
+
+.guideline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Guideline Images */
+.guideline-image {
+  width: 80px; /* Increased size */
+  height: 80px;
+  object-fit: cover; /* Fill the circular area */
+  background-color: rgba(74, 144, 226, 0.1); /* Light background */
+  border-radius: 50%;
+  margin: 0.5rem auto 1rem; /* Adjusted margin to fit larger image */
+  display: block;
+}
+
+/* Fallback for broken images */
+.guideline-image[alt] {
+  position: relative;
+}
+
+.guideline-image[alt]::after {
+  content: attr(alt);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  width: 100%;
+  opacity: 0.7;
+}
+
+/* Guideline Text */
+.guideline-card p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Form Styling */
+.upload-content form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.upload-content .form-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.upload-content .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.upload-content .btn-primary {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-content .btn-primary:hover {
+  background-color: #357abd;
+  border-color: #357abd;
+  transform: translateY(-2px);
+}
+
+.upload-content .btn-primary:disabled {
+  background-color: #a0c4ff;
+  border-color: #a0c4ff;
+  cursor: not-allowed;
+}
+
+.upload-content .text-success {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.upload-content .text-danger {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .upload-content {
+    padding: 1rem;
+    margin-top: 80px;
+  }
+
+  .upload-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .upload-content .card-body {
+    padding: 1.5rem;
+  }
+
+  .guidelines-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .guideline-card {
+    padding: 1rem;
+  }
+
+  .guideline-image {
+    width: 60px; /* Adjusted for smaller screens */
+    height: 60px;
+  }
+
+  .guideline-card p {
+    font-size: 0.95rem;
+  }
+
+  .upload-content form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guideline-card p {
+    font-size: 0.9rem;
+  }
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    width: 200px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .dashboard-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 0.75rem;
+  }
+
+  .stat-card h5 {
+    font-size: 0.9rem;
+  }
+
+  .stat-value {
+    font-size: 1rem;
+  }
+
+  .dashboard-section .card canvas {
+    height: 250px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content .btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .options-section h2 {
+    font-size: 2rem;
+  }
+
+  .options-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: 80vh;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card h5 {
+    font-size: 0.85rem;
+  }
+
+  .stat-value {
+    font-size: 0.9rem;
+  }
+
+  .diagnosis-item strong {
+    font-size: 0.9rem;
+  }
+
+  .diagnosis-item p {
+    font-size: 0.85rem;
+  }
+}
+
+/* src/App.css */
+
+/* Results Content */
+/* src/App.css */
+/* src/App.css */
+/* src/App.css */
+/* src/App.css */
+
+/* Results Content */
+.results-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: #f6f8f9; /* Light background like the example */
+}
+
+.results-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.results-content .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.results-content .card-body {
+  padding: 2rem;
+}
+
+.results-content .card-body h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Center the Suggested Exercises Heading */
+/* .results-content .exercises-heading { */
+  /* text-align: center;
+  margin-bottom: 70 !important;
+  font-weight: 600; */
+  
+/* } */
+
+/* Diagnosis Overview */
+.results-content .card-body p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.results-content .card-body p strong {
+  font-weight: 600;
+}
+
+/* Severity Badge */
+.results-content .badge {
+  font-size: 0.85rem;
+  padding: 0.35em 0.65em;
+  border-radius: 0.25rem;
+}
+
+/* Exercises List */
+.exercises-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Reduced gap since section-number adds separation */
+}
+
+/* Exercise Wrapper */
+.exercise-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Number Container */
+.section-number-container {
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  margin-bottom: 1rem;
+}
+
+/* Section Number */
+.section-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #4a90e2; /* Matching blue color */
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+/* Exercise Item */
+.exercise-item {
+  display: flex;
+  align-items: center;
+  background: none; /* No background */
+  border: none; /* No border */
+  padding: 1rem 0; /* Minimal padding */
+  width: 100%;
+}
+
+/* Image Left (Odd Items) */
+.exercise-item.image-left {
+  flex-direction: row;
+}
+
+/* Image Right (Even Items) */
+.exercise-item.image-right {
+  flex-direction: row-reverse;
+}
+
+/* Exercise Image Container */
+.exercise-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Exercise Image */
+.exercise-image {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Exercise Content */
+.exercise-content {
+  flex: 1;
+  padding: 1rem 2rem;
+}
+
+.exercise-content h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4a90e2; /* Blue accent to match your app's style */
+  margin-bottom: 1rem;
+}
+
+.exercise-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.exercise-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.exercise-content ol li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* View Progress Button */
+.results-content .btn-primary {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.results-content .btn-primary:hover {
+  background-color: #357abd;
+  border-color: #357abd;
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .results-content {
+    padding: 1rem;
+    margin-top: 80px;
+  }
+
+  .results-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .results-content .card-body {
+    padding: 1.5rem;
+  }
+
+  .exercise-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exercise-item.image-left,
+  .exercise-item.image-right {
+    flex-direction: column;
+  }
+
+  .exercise-image-container {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .exercise-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+
+  .exercise-content {
+    padding: 0.5rem 0;
+  }
+
+  .exercise-content h6 {
+    font-size: 1.3rem;
+  }
+
+  .exercise-content p,
+  .exercise-content ol li {
+    font-size: 0.95rem;
+  }
+
+  .section-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .exercise-content h6 {
+    font-size: 1.2rem;
+  }
+
+  .exercise-content p,
+  .exercise-content ol li {
+    font-size: 0.9rem;
+  }
+
+  .section-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+}
