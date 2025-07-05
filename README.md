@@ -8,23 +8,23 @@ An AI-driven web platform for early detection, severity grading, and rehabilitat
 
 ## 🎥 Demo Video
 
-▶️ [Download Demo Video](./assets/RespiratoryCare.mp4)
+(./assets/RespiratoryCare.mp4)
 
 ## 🔍 Overview
 
 **RespireAI** enables users to record or upload respiratory sounds for real-time analysis. It identifies abnormal acoustic patterns (e.g., crackles, wheezes), classifies conditions (COPD, URTI, bronchiectasis, etc.), assesses severity levels (I–IV), and offers tailored breathing exercise recommendations.
 
-### 🚀 Key Features
-- 🎙️ **Record or Upload Audio**  
-- 🧠 **AI-Powered Diagnosis & Severity Grading**  
-- 📊 **Health Progress Dashboard**  
-- 🧘 **Personalized Rehab Guidance**  
-- 🌐 **Web-Based & Accessible**  
-- 🔐 **User Authentication & Storage**  
+###  Key Features
+- **Record or Upload Audio**  
+- **AI-Powered Diagnosis & Severity Grading**  
+- **Health Progress Dashboard**  
+- **Personalized Rehab Guidance**  
+- **Web-Based & Accessible**  
+- **User Authentication & Storage**  
 
 ---
 
-## 🧠 Machine Learning Pipeline
+## Machine Learning Pipeline
 
 - **Feature Extraction**: MFCCs, ZCR, Spectral Centroid, Chroma  
 - **Models**: Random Forests for diagnosis, severity, anomaly detection  
@@ -36,7 +36,7 @@ An AI-driven web platform for early detection, severity grading, and rehabilitat
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 
 | Layer      | Technologies                     |
 |------------|----------------------------------|
@@ -47,7 +47,7 @@ An AI-driven web platform for early detection, severity grading, and rehabilitat
 
 ---
 
-## 📁 Application Modules
+##  Application Modules
 
 - Audio Upload & Recording  
 - ML Diagnosis & Severity Engine  
@@ -57,11 +57,11 @@ An AI-driven web platform for early detection, severity grading, and rehabilitat
 
 ---
 
-## 💡 Use Cases
+##  Use Cases
 
-- 🏥 Post-COVID pulmonary recovery  
-- 🧑‍⚕️ Remote respiratory health monitoring  
-- 🌍 Accessible diagnostics in low-resource areas  
-- 📈 Long-term chronic disease tracking  
+- Post-COVID pulmonary recovery  
+- Remote respiratory health monitoring  
+- Accessible diagnostics in low-resource areas  
+- Long-term chronic disease tracking  
 
 
