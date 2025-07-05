@@ -4,11 +4,6 @@
 
 An AI-driven web platform for early detection, severity grading, and rehabilitation guidance for respiratory diseases using recorded breathing and cough sounds. Designed to support post-COVID recovery and pulmonary health monitoring using only a microphone—no specialized hardware needed.
 
----
-
-## 🎥 Demo Video
-
-(assets/RespiratoryCare.mp4)
 
 ##  Overview
 
@@ -58,6 +53,8 @@ An AI-driven web platform for early detection, severity grading, and rehabilitat
 - Post-COVID pulmonary recovery  
 - Remote respiratory health monitoring  
 - Accessible diagnostics in low-resource areas  
-- Long-term chronic disease tracking  
+- Long-term chronic disease tracking
+
+
 
 
