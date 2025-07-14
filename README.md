@@ -17,6 +17,8 @@ An AI-driven web platform for early detection, severity grading, and rehabilitat
 
 ---
 
+### Demo
+https://github.com/user-attachments/assets/85478a65-fdd0-430e-8840-9b8689017e13
 
 
 ## Machine Learning Pipeline
